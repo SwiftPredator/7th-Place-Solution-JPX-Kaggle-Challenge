@@ -1,0 +1,15 @@
+name: jpx
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - numpy
+  - pandas
+  - scikit-learn
+  - lightgbm
+  - optuna
+  - matplotlib
+  - seaborn
