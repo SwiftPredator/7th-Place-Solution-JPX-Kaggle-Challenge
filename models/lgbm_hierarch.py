@@ -12,7 +12,7 @@ class LGBMHierarchModel(Model):
     def __init__(self, device=None, seed=69):
         self.seed = seed
         self._best_found_params = {
-            "num leaves": 17,
+            "num_leaves": 17,
             "learning_rate": 0.014,
             "n_estimators": 700,
             "max_depth": -1,
