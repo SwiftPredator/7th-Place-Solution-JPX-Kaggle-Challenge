@@ -1,1 +1,0 @@
-# JPX-Tokyo-Stock-Kaggle-Challenge

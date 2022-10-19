@@ -5,11 +5,14 @@ channels:
   - defaults
 dependencies:
   - python=3.9
-  - pytorch
+  - pytorch::pytorch=1.11.0
+  - cudatoolkit=11.3
   - numpy
-  - pandas
-  - scikit-learn
-  - lightgbm
-  - optuna
-  - matplotlib
-  - seaborn
+  - pip:
+    - lightgbm
+    - tqdm
+    - seaborn
+    - scipy
+    - scikit-learn
+    - pandas
+    - optuna
