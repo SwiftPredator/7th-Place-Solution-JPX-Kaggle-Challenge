@@ -1,0 +1,9 @@
+.
+./input
+./input/jpx-tokyo-stock-exchange-prediction
+./input/jpx-tokyo-stock-exchange-prediction/data_specifications
+./input/jpx-tokyo-stock-exchange-prediction/example_test_files
+./input/jpx-tokyo-stock-exchange-prediction/jpx_tokyo_market_prediction
+./input/jpx-tokyo-stock-exchange-prediction/supplemental_files
+./input/jpx-tokyo-stock-exchange-prediction/train_files
+./models
