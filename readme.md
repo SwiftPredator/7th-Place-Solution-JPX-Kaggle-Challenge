@@ -13,9 +13,10 @@ conda env create -f environment.yml
 conda activate jpx
 ```
 
-All results on the public testset from the supplementary files can be reproduced with the following bash command
+All results on the public testset from the supplementary files can be reproduced with the following bash commands executed from the root directory.
 
 ```sh
+mkdir ./results # create dir to save results
 python evaluate_models.py -m lgbmhierarch -p ./results -dp input/jpx-tokyo-stock-exchange-prediction/
 ```
 
