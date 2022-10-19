@@ -6,16 +6,17 @@ Besides the Kaggle resources, we used a Intel E5-2620v4 CPU and a Nvidia GTX 108
 ## OS
 All experiments were executed under Debian buster Version 10
 
-## Setup Conda Environment: 
+## Setup Conda Environment:
 
 ```sh
 conda env create -f environment.yml
+conda activate jpx
 ```
 
 All results on the public testset from the supplementary files can be reproduced with the following bash command
 
 ```sh
-python evaluate_models.py -m lgbmhierarch -p ./results -dp input/jpx-tokyo-stock-exchange-prediction/ -d 0
+python evaluate_models.py -m lgbmhierarch -p ./results -dp input/jpx-tokyo-stock-exchange-prediction/
 ```
 
 ## Training 

@@ -1,13 +1,11 @@
 name: jpx
 channels:
   - conda-forge
-  - pytorch
   - defaults
 dependencies:
   - python=3.9
-  - pytorch::pytorch=1.11.0
-  - cudatoolkit=11.3
   - numpy
+  - pip
   - pip:
     - lightgbm
     - tqdm
@@ -16,3 +14,4 @@ dependencies:
     - scikit-learn
     - pandas
     - optuna
+    - ipykernel

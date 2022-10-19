@@ -3,7 +3,6 @@ from typing import Dict, List, Tuple
 from urllib.parse import uses_params
 
 import pandas as pd
-from torch import embedding
 
 # from ..model import Model
 

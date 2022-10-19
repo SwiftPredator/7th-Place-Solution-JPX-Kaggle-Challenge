@@ -4,21 +4,13 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
-import torch
 from sklearn import linear_model, metrics
 
 from evaluate import Evaluation
-from models import LGBMHierarchModel, LGBMRankerModel, LGBMRegressionModel, LSTMModel
-from models.gru import GRUModel
+from models import LGBMHierarchModel
 from preprocess import data_pipeline
 
-model_map = {
-    "lgbmranker": (LGBMRankerModel, {}),
-    "lgbmreg": (LGBMRegressionModel, {}),
-    "lgbmhierarch": (LGBMHierarchModel, {}),
-    "lstm": (LSTMModel, {}),
-    "gru": (GRUModel, {}),
-}
+model_map = {"lgbmhierarch": (LGBMHierarchModel, {})}
 
 
 def generate_dataset(args):
@@ -40,11 +32,6 @@ def evaluate_model(args, train, test):
         data (pyg Data): Data to train on
     """
     np.random.seed(args["seed"])
-    torch.manual_seed(args["seed"])
-    torch.cuda.manual_seed(args["seed"])
-
-    torch.cuda.set_device(args["device"])
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     models = [m for m in args["models"].split(",")]
     eva_metrics = {
@@ -56,7 +43,7 @@ def evaluate_model(args, train, test):
 
     for m in models:
         model, margs = model_map[m]
-        model = model(device=device, seed=args["seed"], **margs)
+        model = model(device=None, seed=args["seed"], **margs)
         model.train(train.copy(), use_params=True)
         eva.register_model(m, model)
 
@@ -87,9 +74,6 @@ if __name__ == "__main__":
         help="load path for dataset",
         required=True,
         type=str,
-    )
-    parser.add_argument(
-        "-d", "--device", help="Cuda device number", type=int, required=True
     )
     parser.add_argument(
         "-se",
