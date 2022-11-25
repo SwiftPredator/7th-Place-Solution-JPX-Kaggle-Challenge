@@ -1,7 +1,7 @@
-# JPX Kaggle Challenge 8th Place Solution Code
+# JPX Kaggle Challenge 7th Place Solution Code
 Note: JPX data has to be placed in a directory called /input/jpx-tokyo-stock-exchange-prediction/. It is the same structure as on the Kaggle competition site. 
 ## Hardware
-Besides the Kaggle resources, we used a Intel E5-2620v4 CPU and a Nvidia GTX 1080 TI as GPU to test our approaches.
+Besides the Kaggle resources, we used an Intel E5-2620v4 CPU and a Nvidia GTX 1080 TI as GPU to test our approaches.
 
 ## OS
 All experiments were executed under Debian buster Version 10
